@@ -16,21 +16,46 @@
 // }
 
 
-// Tache 4 exo2
-// Définition du mixin pour la boîte arrondie
-@mixin rounded-box($border-size, $background-color) {
-    border-radius: 10px; 
-    border: $border-size solid darken($background-color, 10%);
-    background-color: $background-color;
-    padding: 10px; 
+// // Tache 4 exo2
+// // Définition du mixin pour la boîte arrondie
+// @mixin rounded-box($border-size, $background-color) {
+//     border-radius: 10px; 
+//     border: $border-size solid darken($background-color, 10%);
+//     background-color: $background-color;
+//     padding: 10px; 
+//   }
+  
+//   // Utilisation du mixin pour appliquer les styles à plusieurs éléments 
+//   .box1 {
+//     @include rounded-box(2px, #ff0000); 
+//   }
+  
+//   .box2 {
+//     @include rounded-box(3px, #00ff00);
+//   }
+  
+
+
+// Tache4 exo3
+@function lighten-color($color, $amount) {
+    @return lighten($color, $amount);
   }
   
-  // Utilisation du mixin pour appliquer les styles à plusieurs éléments 
-  .box1 {
-    @include rounded-box(2px, #ff0000); 
+  $primary-color: #ff0000; 
+  
+  $lighter-color1: lighten-color($primary-color, 10%); 
+  $lighter-color2: lighten-color($primary-color, 20%); 
+  $lighter-color3: lighten-color($primary-color, 30%); 
+  
+  .element1 {
+    background-color: $lighter-color1;
   }
   
-  .box2 {
-    @include rounded-box(3px, #00ff00);
+  .element2 {
+    background-color: $lighter-color2;
+  }
+  
+  .element3 {
+    background-color: $lighter-color3;
   }
   
