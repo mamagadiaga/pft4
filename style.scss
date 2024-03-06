@@ -36,26 +36,42 @@
   
 
 
-// Tache4 exo3
-@function lighten-color($color, $amount) {
-    @return lighten($color, $amount);
+// // Tache4 exo3
+// @function lighten-color($color, $amount) {
+//     @return lighten($color, $amount);
+//   }
+  
+//   $primary-color: #ff0000; 
+  
+//   $lighter-color1: lighten-color($primary-color, 10%); 
+//   $lighter-color2: lighten-color($primary-color, 20%); 
+//   $lighter-color3: lighten-color($primary-color, 30%); 
+  
+//   .element1 {
+//     background-color: $lighter-color1;
+//   }
+  
+//   .element2 {
+//     background-color: $lighter-color2;
+//   }
+  
+//   .element3 {
+//     background-color: $lighter-color3;
+//   }
+  
+
+
+// Tache4 exo4
+header {
+    background-color: #333;
+    color: #fff;
   }
-  
-  $primary-color: #ff0000; 
-  
-  $lighter-color1: lighten-color($primary-color, 10%); 
-  $lighter-color2: lighten-color($primary-color, 20%); 
-  $lighter-color3: lighten-color($primary-color, 30%); 
-  
-  .element1 {
-    background-color: $lighter-color1;
+footer {
+    background-color: #333;
+    color: #fff;
   }
-  
-  .element2 {
-    background-color: $lighter-color2;
+.sidebar {
+    background-color: #f4f4f4;
+    color: #333;
   }
-  
-  .element3 {
-    background-color: $lighter-color3;
-  }
-  
+      
