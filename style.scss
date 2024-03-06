@@ -1,15 +1,36 @@
-// Déclaration des variables
-$primary-color: #ff0000;
-$secondary-color: #00ff00;
-$text-color: #000000;
+// Tache 4 exo1
+// // Déclaration des variables
+// $primary-color: #ff0000;
+// $secondary-color: #00ff00;
+// $text-color: #000000;
 
-// Utilisation des variables pour définir les styles
-body {
-  background-color: $primary-color;
-  color: $text-color;
-}
+// // Utilisation des variables pour définir les styles
+// body {
+//   background-color: $primary-color;
+//   color: $text-color;
+// }
 
-.secondary-element {
-  background-color: $secondary-color;
-  color: $text-color;
-}
+// .secondary-element {
+//   background-color: $secondary-color;
+//   color: $text-color;
+// }
+
+
+// Tache 4 exo2
+// Définition du mixin pour la boîte arrondie
+@mixin rounded-box($border-size, $background-color) {
+    border-radius: 10px; 
+    border: $border-size solid darken($background-color, 10%);
+    background-color: $background-color;
+    padding: 10px; 
+  }
+  
+  // Utilisation du mixin pour appliquer les styles à plusieurs éléments 
+  .box1 {
+    @include rounded-box(2px, #ff0000); 
+  }
+  
+  .box2 {
+    @include rounded-box(3px, #00ff00);
+  }
+  
