@@ -1,0 +1,81 @@
+// Tache5 exo1
+// Définition des variables
+@primary-color: #ff0000;
+@secondary-color: #00ff00;
+@text-color: #000000;
+
+// Utilisation des variables pour définir les styles
+body {
+  background-color: @primary-color;
+  color: @text-color;
+}
+
+.secondary-element {
+  background-color: @secondary-color;
+  color: @text-color;
+}
+
+
+// Tache5 exo2
+.rounded-box(@border-size: 5px, @background-color: #ffffff) {
+    border-radius: 10px;
+    border: @border-size solid darken(@background-color, 10%); 
+    background-color: @background-color;
+    padding: 10px;
+  }
+  
+  .box1 {
+    .rounded-box(3px, #ff0000); 
+  }
+  
+  .box2 {
+    .rounded-box(6px, #00ff00); 
+  }
+  
+  .box3 {
+    .rounded-box(); 
+  }
+  
+
+// Tache5 exo3
+.lighten(@color, @amount: 10%) {
+    @lightened-color: lighten(@color, @amount);
+    return @lightened-color;
+  }
+  
+  @primary-color: #ff0000;
+  
+  .lighter-color1 {
+    background-color: @primary-color;
+    color: lighten(@primary-color, 10%);
+  }
+  
+  .lighter-color2 {
+    background-color: @primary-color;
+    color: lighten(@primary-color, 20%);
+  }
+  
+  .lighter-color3 {
+    background-color: @primary-color;
+    color: lighten(@primary-color, 30%);
+  }
+  
+
+
+// Tache5 exo5
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+.sidebar {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 20px;
+  }
+    
